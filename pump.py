@@ -4,7 +4,6 @@ import time
 
 init = False
 
-water_burst_length = 2
 delay = 3	# in case a delay is required - 3 seconds
 
 GPIO.setmode(GPIO.BOARD) # Broadcom pin-numbering scheme
@@ -23,10 +22,11 @@ def auto_water(delay = 3, pump_pin = 8):
 	bursts = 1
 	print("Pump running! Press CTRL+C to exit")
 	try:
-		while (bursts < 3):
+		while (bursts < 2 ):
 			time.sleep(delay)
 			pump_on(pump_pin, 1)
 			time.sleep(1)
+			print(bursts)
 			bursts = bursts + 1
 	
 	except KeyboardInterrupt: # If CTRL+C is pressed, exit cleanly:
@@ -35,9 +35,10 @@ def auto_water(delay = 3, pump_pin = 8):
 def pump_on(pump_pin = 8, delay = 5):
     init_output(pump_pin)
     GPIO.output(pump_pin, GPIO.LOW)
-    time.sleep(water_burst_length)
+    time.sleep(3)
     GPIO.output(pump_pin, GPIO.HIGH)
 
+auto_water()
 
 
 
