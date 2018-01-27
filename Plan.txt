@@ -1,0 +1,37 @@
+Long term
+Automate the three inputs in to plant growth via Pi 3b:
+- Water
+- Light
+- Nutrients
+
+Starting with cress.
+
+Water:
+Moisture sensor(s) periodicaly check soil mouisture
+If too dry, dipesense sufficient water
+
+Light
+Wifi enabled slight socket. UV emmiting light bulb. On timer. 
+
+Nutrients
+TBC. Dispensed in water. Secondary tank?
+
+Feedback
+Via camera. 'Green' detection - numeric output
+
+Automation
+Via Neural Network optimising for 'green' Each cress crop (approx 2 weeks) a new epoch
+Run >= 2 tests concurrently.
+
+Steps:
+1) Mositure sensor in basil
+2) Mositure sensor + water pump in container
+3) Add wifi light and move to dark conditions
+4) Add camera
+5) Add Neural Network to govern conditions
+6) Begin testing
+
+Sat 21st Nov
+Get Python script + libraries on to Pi 1
+Learn  to run script continuously in backgroud
+VNC via Mac
